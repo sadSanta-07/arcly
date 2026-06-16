@@ -1,43 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  /* Core Neo-Brutalist Colors from your design */
   --color-neo-bg: #fff8ef;
   --color-neo-primary: #ffd600;
   --color-neo-secondary: #fe8fe7;
   --color-neo-tertiary: #77ff60;
   --color-neo-surface: #ffffff;
-  
-  /* Fonts */
+
+
   --font-lexend: 'Lexend', sans-serif;
   --font-public-sans: 'Public Sans', sans-serif;
 }
 
 @layer utilities {
-  /* Hard shadow for that stark, brutalist look */
+
   .neu-shadow {
     box-shadow: 5px 5px 0px 0px #000000;
   }
-  
-  /* Interactive button states */
+
+
   .neu-button {
     transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
   }
+
   .neu-button:active {
     transform: translate(5px, 5px);
     box-shadow: 0px 0px 0px 0px #000000;
   }
 
-  /* Card hover animations */
   .neu-card {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
   }
+
   .neu-card:hover {
     transform: translate(-2px, -2px);
     box-shadow: 7px 7px 0px 0px #000000;
   }
 
-  /* Decorative Starburst element */
   .starburst {
     position: absolute;
     background: var(--color-neo-tertiary);
@@ -54,14 +53,68 @@
     box-shadow: 5px 5px 0px 0px black;
     z-index: 10;
   }
-  .starburst-1 { transform: rotate(15deg); }
+
+  .starburst-1 {
+    transform: rotate(15deg);
+  }
+
+  .neo-input {
+    @apply w-full bg-white border-[3px] border-black p-3 outline-none transition-all duration-200 font-sans;
+  }
+
+  .neo-input:focus {
+    @apply shadow-[5px_5px_0px_0px_#000] border-neo-tertiary;
+  }
+
+  .neo-btn {
+    @apply border-[3px] border-black shadow-[5px_5px_0px_0px_#000] transition-all duration-100;
+  }
+
+  .neo-btn:active {
+    @apply translate-x-[4px] translate-y-[4px] shadow-none;
+  }
+
+  .neo-card {
+    @apply border-[3px] border-black shadow-[5px_5px_0px_0px_#000] bg-white;
+  }
 }
 
-/* Hide scrollbar but keep functionality for the workspace */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+@media print {
+  .print-hide {
+    display: none !important;
+  }
+
+  .print-show {
+    display: block !important;
+  }
+
+  body,
+  html {
+    background-color: white !important;
+    height: auto !important;
+  }
+
+  .preview-panel {
+    width: 100% !important;
+    display: block !important;
+    background-color: white !important;
+    padding: 0 !important;
+  }
+
+  .a4-paper {
+    box-shadow: none !important;
+    width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
