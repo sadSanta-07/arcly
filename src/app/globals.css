@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Core Neo-Brutalist Colors from your design */
+  --color-neo-bg: #fff8ef;
+  --color-neo-primary: #ffd600;
+  --color-neo-secondary: #fe8fe7;
+  --color-neo-tertiary: #77ff60;
+  --color-neo-surface: #ffffff;
+  
+  /* Fonts */
+  --font-lexend: 'Lexend', sans-serif;
+  --font-public-sans: 'Public Sans', sans-serif;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  /* Hard shadow for that stark, brutalist look */
+  .neu-shadow {
+    box-shadow: 5px 5px 0px 0px #000000;
   }
+  
+  /* Interactive button states */
+  .neu-button {
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  }
+  .neu-button:active {
+    transform: translate(5px, 5px);
+    box-shadow: 0px 0px 0px 0px #000000;
+  }
+
+  /* Card hover animations */
+  .neu-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  }
+  .neu-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px 0px #000000;
+  }
+
+  /* Decorative Starburst element */
+  .starburst {
+    position: absolute;
+    background: var(--color-neo-tertiary);
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-lexend);
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: black;
+    box-shadow: 5px 5px 0px 0px black;
+    z-index: 10;
+  }
+  .starburst-1 { transform: rotate(15deg); }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Hide scrollbar but keep functionality for the workspace */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
