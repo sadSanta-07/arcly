@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import Footer from "../components/Footer";
 import BuilderPanel from "../components/BuilderPanel";
 import PreviewPanel from "../components/PreviewPanel";
@@ -16,7 +15,7 @@ export default function Home() {
           <div className="text-2xl font-black font-[var(--font-lexend)] uppercase tracking-tighter">
             ARCLY
           </div>
-          <button 
+          <button
             onClick={() => setIsStarted(false)}
             className="neo-btn bg-white px-4 py-2 font-bold text-black uppercase text-sm"
           >
@@ -31,7 +30,6 @@ export default function Home() {
       </div>
     );
   }
-
   return (
     <div className="bg-neo-bg text-black font-sans overflow-x-hidden selection:bg-neo-primary selection:text-black min-h-screen flex flex-col">
       <nav className="w-full sticky top-0 z-50 bg-neo-bg border-b-[3px] border-black">
@@ -44,7 +42,7 @@ export default function Home() {
             <a href="#testimonials" className="hover:text-pink-500 transition-colors cursor-pointer">Testimonials</a>
           </div>
           <div>
-            <button 
+            <button
               onClick={() => setIsStarted(true)}
               className="neo-btn bg-neo-primary px-6 py-3 font-bold uppercase"
             >
@@ -57,8 +55,8 @@ export default function Home() {
       <main className="flex-1">
         <section className="px-4 md:px-12 py-24 md:py-32 relative overflow-hidden border-b-[3px] border-black">
           <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 relative z-10">
-              <div className="starburst starburst-1 -top-12 -left-8 md:-left-16 rotate-12">NEW!</div>
+            <div className="space-y-8 relative z-10 mt-8 md:mt-0">
+              <div className="starburst absolute -top-16 -left-4 md:-top-20 md:-left-8 -rotate-12 z-20">NEW!</div>
               <h1 className="text-6xl md:text-7xl font-black font-[var(--font-lexend)] uppercase leading-none tracking-tighter">
                 Build a Resume that actually gets noticed
               </h1>
@@ -66,13 +64,13 @@ export default function Home() {
                 Stop blending in. Stand out with bold, brutalist templates designed for creatives who refuse to be boring.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button 
+                <button
                   onClick={() => setIsStarted(true)}
                   className="neo-btn bg-neo-primary px-8 py-4 font-bold text-lg uppercase"
                 >
                   Start Building Now
                 </button>
-                <a 
+                <a
                   href="#features"
                   className="neo-btn bg-white px-8 py-4 font-bold text-lg uppercase flex items-center justify-center text-center"
                 >
@@ -91,14 +89,36 @@ export default function Home() {
                   </div>
                   <span className="font-bold text-xs uppercase">Preview</span>
                 </div>
-                <div className="flex-1 border-[3px] border-black p-4 flex flex-col gap-4 bg-neo-bg relative">
-                  <div className="w-24 h-24 bg-neo-primary border-[3px] border-black neu-shadow mb-4 absolute top-4 right-4 rotate-6"></div>
-                  <div className="h-8 w-3/4 bg-black"></div>
-                  <div className="h-4 w-1/2 bg-gray-200 border-[2px] border-black"></div>
-                  <div className="space-y-2 mt-8">
-                    <div className="h-3 w-full bg-gray-200"></div>
-                    <div className="h-3 w-full bg-gray-200"></div>
-                    <div className="h-3 w-4/5 bg-gray-200"></div>
+
+                <div className="flex-1 border-[3px] border-black p-5 flex flex-col gap-4 bg-neo-bg relative">
+                  {/* Sticky Note */}
+                  <div className="w-20 h-20 bg-neo-primary border-[3px] border-black neu-shadow absolute top-4 right-4 rotate-6 flex items-center justify-center font-bold text-sm uppercase">CV</div>
+
+                  <div className="flex items-center gap-4 border-b-2 border-black pb-4 mb-2">
+                    <div className="w-12 h-12 rounded-full bg-black border-2 border-black"></div>
+                    <div className="space-y-2">
+                      <div className="h-4 w-32 bg-black"></div>
+                      <div className="h-2 w-20 bg-gray-400"></div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-2">
+                    <div className="h-3 w-1/2 bg-black"></div>
+                    <div className="h-2 w-full bg-gray-300"></div>
+                    <div className="h-2 w-full bg-gray-300"></div>
+                    <div className="h-2 w-5/6 bg-gray-300"></div>
+                  </div>
+
+                  <div className="space-y-2 mt-2">
+                    <div className="h-3 w-1/3 bg-black"></div>
+                    <div className="h-2 w-full bg-gray-300"></div>
+                    <div className="h-2 w-4/5 bg-gray-300"></div>
+                  </div>
+
+                  <div className="mt-auto flex gap-2">
+                    <div className="h-4 w-12 bg-neo-tertiary border border-black"></div>
+                    <div className="h-4 w-16 bg-[#fe8fe7] border border-black"></div>
+                    <div className="h-4 w-10 bg-neo-primary border border-black"></div>
                   </div>
                 </div>
               </div>
@@ -113,12 +133,12 @@ export default function Home() {
                 Our features are designed to make recruiters stop scrolling and start reading.
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="neo-card p-8 flex flex-col gap-6 relative overflow-hidden group bg-white">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-[#ffd7f1] rounded-full border-[3px] border-black group-hover:scale-110 transition-transform duration-300"></div>
                 <div className="w-16 h-16 bg-neo-primary border-[3px] border-black neu-shadow flex items-center justify-center relative z-10 group-hover:-translate-y-2 transition-transform duration-300">
-                  <Image src="/paint.png" alt="Paint icon" width={32} height={32} className="w-8 h-8 object-contain" />
+                  <img src="/paint.png" alt="Paint icon" className="w-8 h-8 object-contain" />
                 </div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold font-[var(--font-lexend)] mb-2">Bold Aesthetics</h3>
@@ -129,7 +149,7 @@ export default function Home() {
               <div className="neo-card p-8 flex flex-col gap-6 relative overflow-hidden group bg-white">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-neo-tertiary rounded-full border-[3px] border-black group-hover:scale-110 transition-transform duration-300"></div>
                 <div className="w-16 h-16 bg-[#fe8fe7] border-[3px] border-black neu-shadow flex items-center justify-center relative z-10 group-hover:-translate-y-2 transition-transform duration-300">
-                  <Image src="/zap.png" alt="Lightning bolt icon" width={32} height={32} className="w-8 h-8 object-contain" />
+                  <img src="/zap.png" alt="Lightning bolt icon" className="w-8 h-8 object-contain" />
                 </div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold font-[var(--font-lexend)] mb-2">Fast Export</h3>
@@ -140,7 +160,7 @@ export default function Home() {
               <div className="neo-card p-8 flex flex-col gap-6 relative overflow-hidden group bg-white">
                 <div className="absolute -right-4 -top-4 w-24 h-24 bg-neo-primary rounded-full border-[3px] border-black group-hover:scale-110 transition-transform duration-300"></div>
                 <div className="w-16 h-16 bg-[#06e600] border-[3px] border-black neu-shadow flex items-center justify-center relative z-10 group-hover:-translate-y-2 transition-transform duration-300">
-                  <Image src="/rocket.png" alt="Rocket icon" width={32} height={32} className="w-8 h-8 object-contain" />
+                  <img src="/rocket.png" alt="Rocket icon" className="w-8 h-8 object-contain" />
                 </div>
                 <div className="relative z-10">
                   <h3 className="text-2xl font-bold font-[var(--font-lexend)] mb-2">ATS Friendly</h3>
@@ -156,11 +176,11 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-black font-[var(--font-lexend)] uppercase">They Stood Out</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              
+
               <div className="bg-[#ffd7f1] border-[3px] border-black neu-shadow p-8 relative hover:-translate-y-2 transition-transform duration-300">
                 <p className="text-lg font-bold mb-6 relative z-10">&quot;I applied to 50 jobs with my old resume and heard nothing. Switched to an ARCLY template and got 3 interviews in a week.&quot;</p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-black rounded-full"></div>
+                  <img src="/person1.jpg" alt="Sarah J." className="w-12 h-12 rounded-full border-[3px] border-black object-cover" />
                   <div>
                     <div className="font-bold text-lg">Sarah J.</div>
                     <div className="text-sm font-bold text-gray-700">UX Designer</div>
@@ -171,7 +191,7 @@ export default function Home() {
               <div className="bg-[#ffe170] border-[3px] border-black neu-shadow p-8 relative lg:-translate-y-4 hover:-translate-y-6 transition-transform duration-300">
                 <p className="text-lg font-bold mb-6 relative z-10">&quot;The bold style exactly matches my portfolio. It feels like a cohesive brand package now.&quot;</p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-black rounded-full"></div>
+                  <img src="/person2.jpg" alt="Mark D." className="w-12 h-12 rounded-full border-[3px] border-black object-cover" />
                   <div>
                     <div className="font-bold text-lg">Mark D.</div>
                     <div className="text-sm font-bold text-gray-700">Frontend Dev</div>
@@ -182,7 +202,7 @@ export default function Home() {
               <div className="bg-neo-tertiary border-[3px] border-black neu-shadow p-8 relative lg:-translate-y-8 hidden lg:block hover:-translate-y-10 transition-transform duration-300">
                 <p className="text-lg font-bold mb-6 relative z-10">&quot;Recruiters literally mentioned how cool my resume looked during the screening calls.&quot;</p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-black rounded-full"></div>
+                  <img src="/person3.jpg" alt="Alex T." className="w-12 h-12 rounded-full border-[3px] border-black object-cover" />
                   <div>
                     <div className="font-bold text-lg">Alex T.</div>
                     <div className="text-sm font-bold text-gray-700">Marketing Lead</div>
@@ -193,11 +213,12 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="px-4 md:px-12 py-32 bg-neo-primary border-b-[3px] border-black relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10 space-y-8">
             <h2 className="text-5xl md:text-7xl font-black font-[var(--font-lexend)] uppercase leading-none">Ready to drop the boring?</h2>
             <p className="text-2xl font-bold text-[#705d00] max-w-2xl mx-auto">Build your new resume in minutes.</p>
-            <button 
+            <button
               onClick={() => setIsStarted(true)}
               className="neo-btn bg-black text-white px-12 py-6 font-bold text-xl uppercase hover:bg-white hover:text-black transition-colors relative z-20"
             >
