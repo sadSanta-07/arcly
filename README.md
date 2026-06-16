@@ -62,8 +62,8 @@ Want to spin this up on your own machine? It takes seconds.
 **1. Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/arcly-resume-builder.git
-cd arcly-resume-builder
+git clone https://github.com/sadSanta-07/arcly
+cd arcly
 
 ```
 
@@ -89,6 +89,6 @@ npm run dev
 
 Designed and engineered by **Sahil Singh** as a trial project for **Digital Heroes**.
 
-* **Email:** sahil.singh@example.com *(Update this with your real email!)*
-* **GitHub:** [github.com/sahilsingh](https://www.google.com/search?q=https://github.com/sahilsingh)
-* **Deployed on:** [Vercel](https://vercel.com/)
+* **Email:** sahilsingh107433@gmail.com
+* **GitHub:** [github.com/sadSanta-07](https://github.com/sadSanta-07)
+* **Deployed on:** [Vercel](https://arcly-resume.vercel.app/)
