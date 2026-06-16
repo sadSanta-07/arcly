@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ARCLY 
 
-## Getting Started
+> **THE BOLDEST WAY TO BUILD A RESUME. ZERO SUBSCRIPTIONS. ZERO FRICTION.**
 
-First, run the development server:
+---
+
+## EYE CANDY 
+
+*(Drop your screenshots in the `public` folder and update these links!)*
+
+> **The Front Door:** High-contrast, Neo-Brutalist marketing page built to grab attention.
+![hero](./public/hero.png)
+
+
+> **The Engine:** Split-personality UI. Chaotic and creative on the left, strictly professional and ATS-compliant on the right.
+![workspace](./public/workspace.png)
+
+---
+
+## 💀 THE PROBLEM
+
+Most online resume builders are traps. You spend 30 minutes typing out your entire professional history, tweaking the margins, and perfecting your bullet points—only to get hit with a hidden $5 paywall the second you click "Download PDF."
+
+If they do let you download it, it's riddled with watermarks or uses absolute-positioned canvases that Applicant Tracking Systems (ATS) can't even read.
+
+## 🚀 THE FIX
+
+**ARCLY** is a 100% free, fully client-side resume builder built for developers and creatives.
+
+* **Zero Accounts:** Jump straight in. No email verification required.
+* **Zero Data Harvesting:** Everything you type is saved instantly and exclusively to your own browser's `localStorage`.
+* **Zero Cost:** Native PDF generation means no expensive backend processing.
+
+---
+
+## 🎨 CORE FEATURES
+
+* **Split-Personality Design:** An aggressive, visually distinct Neo-Brutalist editor workspace paired with a flawless, classic corporate PDF output.
+* **Real-Time Preview:** Powered by Zustand, every single keystroke updates the live A4 preview sheet instantly without React re-render lag.
+* **Auto-Save:** Close the tab? Refresh the page? Your data is exactly where you left it.
+* **ATS-Optimized Export:** Uses standard, semantic HTML formatting inside a custom `@media print` query so automated resume scanners can read every word perfectly.
+* **Sample Data Injection:** One-click dummy data loading to test layouts instantly.
+
+---
+
+## 🛠️ THE TECH STACK
+
+| Technology | Purpose |
+| --- | --- |
+| **Next.js 16** | Core framework leveraging the App Router for a lightning-fast SPA layout. |
+| **Tailwind CSS v4** | Heavy use of custom `@theme` variables for stark borders, hard shadows (`5px 5px 0px #000`), and fluid responsiveness. |
+| **Zustand** | Bulletproof global state management with built-in `persist` middleware for seamless `localStorage` syncing. |
+| **CSS Print Media** | Hijacks the browser's native `window.print()` to strip away the UI and generate pixel-perfect A4 documents. |
+| **Vercel** | Edge-network deployment running cleanly on the ₹0 Hobby tier. |
+
+---
+
+## ⚙️ RUN IT LOCALLY
+
+Want to spin this up on your own machine? It takes seconds.
+
+**1. Clone the repository:**
+
+```bash
+git clone https://github.com/yourusername/arcly-resume-builder.git
+cd arcly-resume-builder
+
+```
+
+**2. Install dependencies:**
+
+```bash
+npm install
+
+```
+
+**3. Start the development engine:**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Open `http://localhost:3000` and start building.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 👤 DEVELOPER
 
-## Learn More
+Designed and engineered by **Sahil Singh** as a trial project for **Digital Heroes**.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* **Email:** sahil.singh@example.com *(Update this with your real email!)*
+* **GitHub:** [github.com/sahilsingh](https://www.google.com/search?q=https://github.com/sahilsingh)
+* **Deployed on:** [Vercel](https://vercel.com/)
