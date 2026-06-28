@@ -5,14 +5,8 @@
 ---
 
 ## EYE CANDY 
-
-*(Drop your screenshots in the `public` folder and update these links!)*
-
-> **The Front Door:** High-contrast, Neo-Brutalist marketing page built to grab attention.
 ![hero](./public/hero.png)
 
-
-> **The Engine:** Split-personality UI. Chaotic and creative on the left, strictly professional and ATS-compliant on the right.
 ![workspace](./public/workspace.png)
 
 ---
